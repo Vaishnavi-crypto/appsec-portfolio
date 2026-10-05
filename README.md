@@ -97,7 +97,7 @@ A local educational lab demonstrating insecure direct object reference (IDOR) an
 
 **Skills:** IDOR, BOLA, Broken Access Control, Flask, Python, Burp Suite, Session Security, Secure Coding
 
-**Link:** [View IDOR/BOLA lab](./04-idor-bola-secure-vs-vulnerable-lab/)
+**Link:** [View IDOR/BOLA lab](./04-appsec-idor-lab/)
 
 ---
 
