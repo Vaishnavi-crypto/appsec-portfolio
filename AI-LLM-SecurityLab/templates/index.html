@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI & LLM Security Lab</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- Header -->
+    <header class="topbar">
+        <div>
+            <h1>AI & LLM Security Lab</h1>
+            <p>Controlled environment for AI security testing</p>
+        </div>
+
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            Local Lab
+        </div>
+    </header>
+
+
+    <!-- Main Layout -->
+    <main class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="panel">
+                <h2>Test Configuration</h2>
+
+                <label for="userId">User ID</label>
+
+                <input
+                    type="text"
+                    id="userId"
+                    value="UNKNOWN"
+                    placeholder="Enter user ID"
+                >
+
+                <p class="hint">
+                    Try UNKNOWN, HR001 or ADMIN001
+                </p>
+            </div>
+
+
+            <div class="panel">
+
+                <h2>Security Tests</h2>
+
+                <button
+                    class="test-button"
+                    onclick="loadTest('prompt-injection')"
+                >
+                    LLM-001
+                    <span>Prompt Injection</span>
+                </button>
+
+                <button
+                    class="test-button"
+                    onclick="loadTest('data-disclosure')"
+                >
+                    LLM-002
+                    <span>Sensitive Data Disclosure</span>
+                </button>
+
+                <button
+                    class="test-button"
+                    onclick="loadTest('excessive-agency')"
+                >
+                    LLM-003
+                    <span>Excessive Agency</span>
+                </button>
+
+                <button
+                    class="test-button"
+                    onclick="loadTest('output-handling')"
+                >
+                    LLM-004
+                    <span>Improper Output Handling</span>
+                </button>
+
+            </div>
+
+
+            <div class="panel security-summary">
+
+                <h2>Assessment Status</h2>
+
+                <div class="summary-item">
+                    <span>Findings</span>
+                    <strong>4</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Remediated</span>
+                    <strong>4</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Regression Tests</span>
+                    <strong>6</strong>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Chat Area -->
+        <section class="chat-section">
+
+            <div class="chat-header">
+
+                <div>
+                    <h2>AI Assistant</h2>
+                    <p>Send a security test payload</p>
+                </div>
+
+                <span class="online-status">
+                    ● Online
+                </span>
+
+            </div>
+
+
+            <!-- Messages -->
+            <div id="chatMessages" class="chat-messages">
+
+                <div class="message assistant">
+
+                    <div class="message-label">
+                        AI Assistant
+                    </div>
+
+                    <div class="message-content">
+                        Welcome to the AI & LLM Security Lab.
+                        <br><br>
+                        Select a security test from the left panel
+                        or enter your own payload below.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Input -->
+            <div class="chat-input-area">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Enter a security test payload..."
+                    rows="3"
+                ></textarea>
+
+                <button
+                    id="sendButton"
+                    onclick="sendMessage()"
+                >
+                    Send Test
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <span>
+            AI & LLM Security Lab
+        </span>
+
+        <span>
+            For authorized security testing only
+        </span>
+
+    </footer>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
