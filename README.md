@@ -60,7 +60,9 @@ The project demonstrates how insecure AI application behavior can be reproduced,
 ### Project Link
 
 [View AI & LLM Security Lab](./AI-LLM-SecurityLab/)
+
 ---
+
 ### 2. VAPT Remediation Case Study: Broken Access Control in ASP.NET
 
 A sanitized case study demonstrating an end-to-end broken-access-control assessment workflow.
