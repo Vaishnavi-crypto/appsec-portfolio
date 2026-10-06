@@ -26,7 +26,42 @@ My security focus includes broken access control, session security, XSS, SQL inj
 
 ## Featured Projects
 
-### 1. VAPT Remediation Case Study: Broken Access Control in ASP.NET
+## 1. AI & LLM Security Testing Lab
+
+A controlled local security lab for assessing common AI and LLM application security risks based on OWASP-aligned security concepts.
+
+The project demonstrates how insecure AI application behavior can be reproduced, analyzed, remediated, and regression-tested in a safe environment using mock employee data.
+
+### What It Demonstrates
+
+- Prompt injection testing.
+- Sensitive information disclosure testing.
+- Excessive agency and unauthorized action testing.
+- Improper output handling.
+- Server-side authorization controls.
+- Secure output encoding.
+- Security regression testing with `pytest`.
+- Security findings documentation and remediation.
+- Interactive security testing dashboard.
+
+### Security Findings
+
+| ID | Finding |
+|---|---|
+| LLM-001 | Prompt Injection |
+| LLM-002 | Sensitive Data Disclosure |
+| LLM-003 | Excessive Agency |
+| LLM-004 | Improper Output Handling |
+
+### Skills and Technologies
+
+`AI/LLM Security` · `Prompt Injection` · `Sensitive Data Disclosure` · `Excessive Agency` · `Output Handling` · `OWASP LLM Security Concepts` · `Flask` · `Python` · `Pytest` · `Secure Coding`
+
+### Project Link
+
+[View AI & LLM Security Lab](./AI-LLM-SecurityLab/)
+
+### 2. VAPT Remediation Case Study: Broken Access Control in ASP.NET
 
 A sanitized case study demonstrating an end-to-end broken-access-control assessment workflow.
 
@@ -44,7 +79,7 @@ A sanitized case study demonstrating an end-to-end broken-access-control assessm
 
 ---
 
-### 2. API Security Testing Checklist
+### 3. API Security Testing Checklist
 
 A reusable checklist for assessing common API security risks in a structured way.
 
@@ -63,7 +98,7 @@ A reusable checklist for assessing common API security risks in a structured way
 
 ---
 
-### 3. ASP.NET Secure Coding Examples
+### 4. ASP.NET Secure Coding Examples
 
 Original, simplified C# examples showing insecure patterns and secure alternatives.
 
@@ -82,7 +117,7 @@ Original, simplified C# examples showing insecure patterns and secure alternativ
 
 ---
 
-### 4. IDOR / BOLA Lab: Vulnerable vs Secure Flask Application
+### 5. IDOR / BOLA Lab: Vulnerable vs Secure Flask Application
 
 A local educational lab demonstrating insecure direct object reference (IDOR) and its secure remediation using server-side session-based authorization.
 
